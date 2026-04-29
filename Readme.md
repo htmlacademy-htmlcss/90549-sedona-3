@@ -2,6 +2,7 @@
 
 * Студент: [Динара Андрианова](https://up.htmlacademy.ru/htmlcss-individual/3/user/90549).
 * Наставник: [Дина Шарипова](https://htmlacademy.ru/profile/id1418957).
+* Сайт: [Сайт](https://ishdi.github.io/90549-sedona-3/).
 
 ---
 
