@@ -115,22 +115,30 @@
       </section>
 
       <section class="catalog">
-        <b class="sorting-title">Найдено гостиниц: 38</b>
+        <h2 class="sorting-title">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала популярные</option>
           <option value="cheap">Сначала дешевые</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
 
-        <a class="sort" href="catalog.html?view=tile">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a class="sort" href="catalog.html?view=card">
-          <span class="visually-hidden">Показать карточки с описанием</span>
-        </a>
-        <a class="sort" href="catalog.html?view=list">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <ul class="sort">
+          <li class="sort-item">
+            <a class="sort-link" href="catalog.html?view=tile">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+          </li>
+          <li class="sort-item">
+            <a class="sort-link" href="catalog.html?view=card">
+              <span class="visually-hidden">Показать карточки с описанием</span>
+            </a>
+          </li>
+          <li class="sort-item">
+            <a class="sort-link" href="catalog.html?view=list">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </li>
+        </ul>
 
         <ul class="catalog-list">
           <li class="catalog-card">
@@ -216,17 +224,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
           <li class="social-item">
-            <a class="button" href="#">
+            <a class="social-item-button" href="#">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="button" href="#">
+            <a class="social-item-button" href="#">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="button" href="#">
+            <a class="social-item-button" href="#">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
