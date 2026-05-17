@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* button */
+
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-additional {
+  background-color: #82b3d3;
+}
+
+.button-reset {
+  background-color: transparent;
+}
+
+.favorites-add {
+  background-color: #7dB54f;
+}
+
+.main-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation-item .button {
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+}
+
+.preview {
+  background-color: #4d7b9a;
+  background-image: url("../images/background/preview.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.page-headline {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-desc {
+  text-align: center;
+}
+
+.page-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.page-headline-and-desc-other-color {
+  color: #ffffff;
+}
+
+.advantages-list {
+  background: rgba(130, 179, 211, 0.12);
+}
+
+.advantages-item {
+  text-align: center;
+}
+
+.advantages-item:nth-child(3) {
+  background: rgba(130, 179, 211, 0.2);
+}
+
+.advantages-with-image {
+  background: rgba(130, 179, 211, 1);
+}
+
+.advantages-item-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.recommendations-list {
+  background: rgba(130, 179, 211, 0.12);
+}
+
+.recommendations-item {
+  text-align: center;
+}
+
+.recommendations-item:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.recommendations-item-description {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.booking {
+  text-align: center;
+}
+
+.subscription {
+  text-align: center;
+}
+
+.main-page-subscription {
+  background-color: #82b3d3;
+  background-image: url("../images/background/subscribe.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contacts-address a {
+  text-decoration: none;
+}
+
+.contacts-phone {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+
+}
+
+.filter-container {
+  background-color: #82b3d3;
+  background-image: url("../images/background/filter.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sorting-filter-group {
+  border: none;
+}
+
+.sorting-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.sorting-filter-item {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.sorting-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.select-control {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.catalog-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.catalog-card-type,
+.catalog-card-price {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.catalog-card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.pagination-link {
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #82b3d3;
+}
+
+.pagination-link-without-number {
+  color: #000000;
+  background-color: transparent;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
