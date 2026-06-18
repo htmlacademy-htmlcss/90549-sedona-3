@@ -79,13 +79,13 @@ body {
 
 .button:focus-visible {
   background-color: #615048;
-  outline-offset: 3px;
+  outline: none;
 }
 
 @supports not selector(:focus-visible) {
   .button:focus {
     background-color: #615048;
-    outline-offset: 3px;
+    outline: none;
   }
 }
 
@@ -109,13 +109,13 @@ body {
 
 .button-additional:focus-visible {
   background-color: #68a2ca;
-  outline-offset: 3px;
+  outline: none;
 }
 
 @supports not selector(:focus-visible) {
   .button-additional:focus {
     background-color: #68a2ca;
-    outline-offset: 3px;
+    outline: none;
   }
 }
 
@@ -145,7 +145,7 @@ body {
   background: transparent;
   border: 3px solid #83b3d3;
   padding: 5px 47px;
-  outline-offset: 3px;
+  outline: none;
 }
 
 @supports not selector(:focus-visible) {
@@ -153,7 +153,7 @@ body {
     background: transparent;
     border: 3px solid #83b3d3;
     padding: 5px 47px;
-    outline-offset: 3px;
+    outline: none;
   }
 }
 
@@ -188,7 +188,6 @@ body {
 @supports not selector(:focus-visible) {
   .favorites-add:focus {
     background-color: #6c9e42;
-    outline-offset: 3px;
   }
 }
 
@@ -201,8 +200,6 @@ body {
   background-color: #e5e5e5;
   pointer-events: none;
 }
-
-
 
 .page-headline {
   font-size: 30px;
@@ -639,7 +636,6 @@ body {
 @supports not selector(:focus-visible) {
   .breadcrumbs-link:focus {
     color: #ffffff;
-    outline-offset: 3px;
   }
 }
 
@@ -720,9 +716,95 @@ body {
   margin: 0;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  opacity: 0.6;
+}
+
+.control:hover .control-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.control-input:focus-visible + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .control-input:focus + .control-mark {
+    outline: 3px solid #83b3d3;
+  }
+}
+
+.control:active .control-mark {
+  opacity: 0.3;
+}
+
+.control:active .control-label {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  width: 13px;
+  height: 10px;
+  background-image: url("../images/icons/icon-checked.svg");
+  content: "";
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
+
 .sorting-inputs {
+  font-family: inherit;
   display: flex;
-  gap: 0 1px;
+  gap: 0 3px;
+  margin-bottom: 36px;
+}
+
+.sorting-label {
+  position: relative;
+}
+
+.label-price {
+  position: absolute;
+  color: #000000;
+  right: 20px;
+  bottom: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  opacity: 0.3;
 }
 
 .price-min {
@@ -733,7 +815,7 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.sorting-inputs input {
+.range-input {
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -744,6 +826,77 @@ body {
   border: none;
   box-sizing: border-box;
 }
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.range-input:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .range-input:focus {
+    outline: 3px solid #83b3d3;
+  }
+}
+
+/* range */
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus-visible {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .range-toggle:focus {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    outline: 3px solid #83b3d3;
+  }
+}
+
+.range-toggle:active {
+  border: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
 
 .select-control {
   position: relative;
@@ -761,14 +914,24 @@ body {
 
   background: url("../images/icons/icon-arrow.svg") no-repeat right 15px center;
   cursor: pointer;
+  margin-right: 70px;
+  margin-left: auto;
 }
 
 .select-control:hover {
   border-color: #68a2ca;
 }
 
-.select-control:focus {
+.select-control:focus-visible {
   border-color: #68a2ca;
+  outline-offset: 3px;
+}
+
+@supports not selector(:focus-visible) {
+  .select-control:focus {
+    border-color: #68a2ca;
+    outline-offset: 3px;
+  }
 }
 
 .select-control:disabled {
@@ -1219,4 +1382,310 @@ body {
 
 .footer-copyright-link:active .footer-copyright-icon {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+/* modal */
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* display: flex; */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 53px;
+  height: 53px;
+  border-radius: 100%;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+  background-image: url("../images/icons/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
+}
+
+@supports not selector(:focus-visible) {
+  .modal-close-button:focus {
+    outline: 3px solid #83b3d3;
+    background-color: #e6e6e6;
+  }
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  background-image: url("../images/icons/icon-close-active.svg");
+}
+
+.modal-search {
+  width: 577px;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 137px 110px auto 111px;
+  align-items: center;
+  gap: 48px 0;
+}
+
+.modal-label-check-in,
+.modal-label-check-out,
+.modal-label-adult {
+  grid-column: 1/2;
+}
+
+.modal-label-container {
+  margin-right: 46px;
+  margin-left: auto;
+}
+
+/* .modal-info {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: url("../images/icons/icon-info.svg") no-repeat center center;
+  background-color: #83b3d3;
+} */
+
+.tooltip {
+  display: none;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 2px;
+
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: #83b3d3;
+  padding: 0;
+  margin: 0;
+  display: block;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 125%;
+  font-weight: 400;
+  text-transform: none;
+  padding: 15px 18px 18px 22px;
+  display: block;
+  border-radius: 10px;
+  width: 216px;
+}
+
+.container-check-in,
+.container-check-out {
+  grid-column: 2/-1;
+}
+
+.modal-input-check-in,
+.modal-input-check-out {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 20px
+}
+
+.container-adult {
+  grid-column: 2/3;
+}
+
+.container-child {
+  grid-column: 4/5;
+}
+
+.modal-input-info {
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 131%;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  bottom: -25px;
+  left: 20px;
+}
+
+.modal-input-info-error {
+  color: #ff5757;
+}
+
+.modal-input-container {
+  position: relative;
+}
+
+.modal-input-adult,
+.modal-input-child {
+  box-sizing: border-box;
+  width: 111px;
+  text-align: center;
+  padding: 12px 40px;
+}
+
+.modal-button {
+  grid-column: 1/-1;
+}
+
+.modal-label {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.modal-input {
+  position: relative;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  color: #000000;
+  border: none;
+
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.modal-form input[type="date"] {
+  background: url("../images/icons/icon-calendar.svg") no-repeat right 15px center;
+  background-color: #f2f2f2;
+}
+
+.modal-form .modal-input:hover {
+  background-color: #e5e5e5;
+  outline: none;
+}
+
+.modal-form .modal-input:focus-visible {
+  background-color: #e5e5e5;
+  outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+  .modal-form .modal-input:focus {
+    background-color: #e5e5e5;
+    outline: 3px solid #83b3d3;
+  }
+}
+
+.modal-form .modal-input:active {
+  background-color: #f2f2f2;
+  outline: none;
+}
+
+.modal-form input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.modal-form input[type="number"]::-webkit-outer-spin-button,
+.modal-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.minus,
+.plus {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.minus {
+  background: url(../images/icons/icon-minus.svg) no-repeat center center;
+  top: 14px;
+  left: 10px;
+}
+
+.plus {
+  background: url(../images/icons/icon-plus.svg) no-repeat center center;
+  top: 14px;
+  right: 10px;
+}
+
+.minus:hover,
+.plus:hover {
+  opacity: 1;
+}
+
+.minus:focus-visible {
+  outline: 3px solid #83b3d3;
+  opacity: 1;
+}
+
+@supports not selector(:focus-visible) {
+  .minus:focus {
+    outline: 3px solid #83b3d3;
+    opacity: 1;
+  }
+}
+
+.plus:focus-visible {
+  outline: 3px solid #83b3d3;
+  opacity: 1;
+}
+
+@supports not selector(:focus-visible) {
+  .plus:focus {
+    outline: 3px solid #83b3d3;
+    opacity: 1;
+  }
+}
+
+.minus:active,
+.plus:active {
+  opacity: 0.2;
 }
