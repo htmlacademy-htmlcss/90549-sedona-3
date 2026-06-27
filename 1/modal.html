@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Модальное окно</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+    <base href="https://htmlacademy-htmlcss.github.io/90549-sedona-3/1/">
+</head>
+
+  <body>
+    <div class="modal-container" data-test="modal">
+      <div class="modal modal-search">
+        <button class="modal-close-button" type="button"><span class="visually-hidden">Закрыть модальное
+            окно</span></button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="modal-label modal-label-check-in" for="check-in">Дата заезда:</label>
+            <div class="modal-input-container container-check-in">
+              <input class="modal-input modal-input-check-in" type="text" id="check-in" name="check-in"
+                value="27 апреля 2020" placeholder="Укажите дату" required>
+              <p class="modal-input-info modal-input-info-error">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <label class="modal-label modal-label-check-out" for="check-out">Дата выезда:</label>
+            <div class="modal-input-container container-check-out">
+              <input class="modal-input modal-input-check-out" type="text" id="check-out" name="check-out"
+                value="1 сентября 2021" placeholder="Укажите дату" required>
+              <p class="modal-input-info">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+            <label class="modal-label modal-label-adult" for="adult">Взрослые:</label>
+            <div class="modal-input-container container-adult">
+              <input class="modal-input modal-input-adult" type="number" id="adult" name="adult" value="2" required>
+              <button class="minus" type="button"><span class="visually-hidden">Убавить количество
+                  взрослых</span></button>
+              <button class="plus" type="button"><span class="visually-hidden">Добавить количество
+                  взрослых</span></button>
+            </div>
+            <div class="modal-label-container">
+              <label class="modal-label modal-label-child" for="child">Дети:</label>
+              <span class="modal-info tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                  <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                  будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </div>
+            <div class="modal-input-container container-child">
+              <input class="modal-input modal-input-child" type="number" id="child" name="child" value="2" required>
+              <button class="minus" type="button"><span class="visually-hidden">Убавить количество
+                  детей</span></button>
+              <button class="plus" type="button"><span class="visually-hidden">Добавить количество
+                  детей</span></button>
+            </div>
+            <button class="modal-button button button-additional" type="submit">Найти</button>
+          </form>
+
+        </section>
+      </div>
+    </div>
+  </body>
+
+</html>
