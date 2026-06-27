@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <title>Седона - городок в Аризоне</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" sizes="32x32" href="favicon.ico">
   </head>
 
   <body>
     <div class="container">
 
-      <header class="header-main">
+      <header class="header-main" data-test="header">
         <a class="header-logo-link" href="index.html" aria-current="page">
           <img class="logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седона">
         </a>
@@ -37,9 +38,7 @@
                   <path
                     d="M19.5 18.0083L15.8 14.3287C16.8 13.0359 17.5 11.3453 17.5 9.4558C17.5 5.08011 13.9 1.5 9.5 1.5C5.1 1.5 1.5 5.17956 1.5 9.55525C1.5 13.9309 5.1 17.511 9.5 17.511C11.3 17.511 13 16.9144 14.4 15.8204L18.1 19.5L19.5 18.0083ZM9.5 15.5221C6.2 15.5221 3.5 12.837 3.5 9.55525C3.5 6.27348 6.2 3.5884 9.5 3.5884C12.8 3.5884 15.5 6.27348 15.5 9.55525C15.5 12.837 12.8 15.5221 9.5 15.5221Z" />
                 </svg>
-                <span class="visually-hidden">
-                  Поиск
-                </span>
+                <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
@@ -62,15 +61,15 @@
 
       </header>
 
-      <main class="main-index">
+      <main class="main-index" data-test="main">
 
-        <section class="preview">
+        <section class="preview" data-test="hero">
           <h1 class="visually-hidden">Седона</h1>
           <img class="preview-image" src="images/welcome.svg" width="458" height="352"
             alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
         </section>
 
-        <section class="advantages">
+        <section class="advantages" data-test="advantages">
           <div class="advantages-container">
             <h2 class="advantages-title page-headline">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!
             </h2>
@@ -80,8 +79,7 @@
           <ul class="advantages-list">
             <li class="advantages-item advantages-with-image">
               <div class="advantages-item-container">
-                <h3 class="advantages-item-title page-subtitle page-other-color">Настоящий городок
-                </h3>
+                <h3 class="advantages-item-title page-subtitle page-other-color">Настоящий городок</h3>
                 <p class="advantages-item-description page-other-color">Седона — не аттракцион для
                   туристов, там течёт своя жизнь</p>
               </div>
@@ -113,7 +111,7 @@
           </ul>
         </section>
 
-        <section class="recommendations">
+        <section class="recommendations" data-test="service">
           <div class="recommendations-container">
             <h2 class="recommendations-title page-headline">Приезжайте в Седону отдохнуть<br> в комфорте и уюте!</h2>
             <p class="recommendations-description page-desc">Опытный персонал и качественное обслуживание!</p>
@@ -121,23 +119,23 @@
           <ul class="recommendations-list">
             <li class="recommendations-item recommendations-home">
               <h3 class="recommendations-item-title page-subtitle">Жильё</h3>
-              <p class="recommendations-item-description">Рекомендуем пожить в настоящем мотеле,
-                всё как в кино!</p>
+              <p class="recommendations-item-description">Рекомендуем пожить <br> в настоящем мотеле, <br> всё как в
+                кино!</p>
             </li>
             <li class="recommendations-item recommendations-food">
               <h3 class="recommendations-item-title page-subtitle">Еда</h3>
-              <p class="recommendations-item-description">Всегда заказывайте
-                топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p class="recommendations-item-description">Всегда заказывайте <br> топовый фирменный бургер, вы не
+                разочаруетесь!</p>
             </li>
             <li class="recommendations-item recommendations-gift">
               <h3 class="recommendations-item-title page-subtitle">Сувениры</h3>
-              <p class="recommendations-item-description">Не только китайского,
-                но и настоящего местного производства!</p>
+              <p class="recommendations-item-description">Не только китайского, <br> но и настоящего местного
+                производства!</p>
             </li>
           </ul>
         </section>
 
-        <section class="booking">
+        <section class="booking" data-test="search">
           <h2 class="booking-title page-headline">Заинтересовались?</h2>
           <p class="booking-description page-desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие
             предложения гостиниц
@@ -145,7 +143,7 @@
           <button class="booking-button button" type="button">Поиск гостиницы в седоне</button>
         </section>
 
-        <section class="subscription main-page-subscription">
+        <section class="subscription main-page-subscription" data-test="subscribe">
           <h2 class="subscription-title page-headline page-other-color">Подпишитесь на рассылку</h2>
           <p class="subscription-description page-desc page-other-color">Только полезная информация и
             никакого спама,<br> честное бойскаутское!</p>
@@ -159,13 +157,13 @@
 
       </main>
 
-      <footer class="main-footer">
+      <footer class="main-footer" data-test="footer">
 
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-list">
             <li class="social-item">
-              <a class="social-link" href="#">
+              <a class="social-link" href="https://vk.com/htmlacademy">
                 <svg class="social-icon" width="24" height="14" viewBox="0 0 24 14" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -175,7 +173,7 @@
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="#">
+              <a class="social-link" href="https://t.me/htmlacademy">
                 <svg class="social-icon" width="18" height="16" viewBox="0 0 18 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -185,7 +183,7 @@
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="#">
+              <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
                 <svg class="social-icon" width="22" height="17" viewBox="0 0 22 17" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -206,7 +204,7 @@
 
         <section class="footer-copyright">
           <h2 class="visually-hidden">Правообладатель</h2>
-          <a class="footer-copyright-link" href="#">
+          <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
             <svg class="footer-copyright-icon" width="115" height="33" viewBox="0 0 115 33" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M0 12.9V15.5H2.5V12.9H0Z" />
@@ -238,43 +236,52 @@
 
       </footer>
 
-      <div class="modal-container">
+      <div class="modal-container modal-container-close">
         <div class="modal modal-search">
-          <button class="modal-close-button"><span class="visually-hidden">Закрыть</span></button>
+          <button class="modal-close-button" type="button"><span class="visually-hidden">Закрыть модальное
+              окно</span></button>
           <section class="modal-content">
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
             <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="modal-label modal-label-check-in" for="check-in">Дата заезда:</label>
               <div class="modal-input-container container-check-in">
-                <input class="modal-input modal-input-check-in" type="date" id="check-in" name="check-in">
+                <input class="modal-input modal-input-check-in" type="text" id="check-in" name="check-in"
+                  value="27 апреля 2020" placeholder="Укажите дату" required>
                 <p class="modal-input-info modal-input-info-error">Мы не можем отправить вас в прошлое.</p>
               </div>
               <label class="modal-label modal-label-check-out" for="check-out">Дата выезда:</label>
               <div class="modal-input-container container-check-out">
-                <input class="modal-input modal-input-check-out" type="date" id="check-out" name="check-out">
+                <input class="modal-input modal-input-check-out" type="text" id="check-out" name="check-out"
+                  value="1 сентября 2021" placeholder="Укажите дату" required>
                 <p class="modal-input-info">На эти даты есть свободные номера. Пока есть.</p>
               </div>
               <label class="modal-label modal-label-adult" for="adult">Взрослые:</label>
               <div class="modal-input-container container-adult">
-                <input class="modal-input modal-input-adult" type="number" id="adult" name="adult" value="2">
-                <button class="minus"><span class="visually-hidden">Минус</span></button>
-                <button class="plus"><span class="visually-hidden">Плюс</span></button>
+                <input class="modal-input modal-input-adult" type="number" id="adult" name="adult" value="2" required>
+                <button class="minus" type="button"><span class="visually-hidden">Убавить количество
+                    взрослых</span></button>
+                <button class="plus" type="button"><span class="visually-hidden">Добавить количество
+                    взрослых</span></button>
               </div>
               <div class="modal-label-container">
                 <label class="modal-label modal-label-child" for="child">Дети:</label>
                 <span class="modal-info tooltip">
-                  <button class="tooltip-toggle" type="button">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4H11V6H9V4ZM11 16H9V7H11V16Z" fill="white" />
                     </svg>
                   </button>
-                  <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                    будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 </span>
               </div>
               <div class="modal-input-container container-child">
-                <input class="modal-input modal-input-child" type="number" id="child" name="child" value="1">
-                <button class="minus"><span class="visually-hidden">Минус</span></button>
-                <button class="plus"><span class="visually-hidden">Плюс</span></button>
+                <input class="modal-input modal-input-child" type="number" id="child" name="child" value="2" required>
+                <button class="minus" type="button"><span class="visually-hidden">Убавить количество
+                    детей</span></button>
+                <button class="plus" type="button"><span class="visually-hidden">Добавить количество
+                    детей</span></button>
               </div>
               <button class="modal-button button button-additional" type="submit">Найти</button>
             </form>
